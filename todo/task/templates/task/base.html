@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'task/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'task/main.css' %}">
+	<title>
+		{% block title %}
+		{% endblock %} | TODO project
+	</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			{% block content %}
+
+			{% endblock %}		
+		</div>
+	</div>
+    <script src="{% static 'task/jquery.js' %}"></script>
+    <script src="{% static 'task/bootstrap.min.js' %}"></script>
+    <script src="{% static 'task/todo.js' %}"></script>
+</body>
+</html>
